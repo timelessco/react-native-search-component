@@ -1,0 +1,30 @@
+{
+  "name": "react-native-search-component",
+  "version": "1.0.0",
+  "description": "A simple customizable Search Component in React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timelessco/react-native-search-component.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "mobile",
+    "ios",
+    "android",
+    "ui"
+  ],
+  "author": "Karthik B",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timelessco/react-native-search-component/issues"
+  },
+  "homepage": "https://github.com/timelessco/react-native-search-component#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.60.0"
+  }
+}
