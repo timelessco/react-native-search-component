@@ -6,15 +6,15 @@
 
 ## :anchor: Installation
 
-### WIP
+
 
 ## :mag: Usage
 
-### WIP
+
 
 ## :camera: Screenshot
 
-### WIP
+
 
 ## :wrench: Props
 
