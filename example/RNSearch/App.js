@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, { useState } from 'react';
 import {
   SafeAreaView, StyleSheet,
@@ -17,9 +9,11 @@ import SearchBar from './src/UISearchBar';
 const App = () => {
   const [theme, setTheme] = React.useState('LIGHT');
   const [searchTerm, setSearchTerm] = useState('');
+
   const toggleTheme = () => theme === 'LIGHT' ? setTheme('DARK') : setTheme('LIGHT');
   const themeBasedContainer = [styles.container, { backgroundColor: theme === 'LIGHT' ? 'white' : 'black' }];
   const themeBasedTextStyle = [styles.textStyle, { color: theme === 'LIGHT' ? 'black' : 'white' }];
+
   const onChange = (e) => {
     setSearchTerm(e?.nativeEvent?.text)
   }
