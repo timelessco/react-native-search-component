@@ -17,11 +17,13 @@ npm i react-native-search-component
 
 ##### React Native Reanimated
 
+```sh
+npm install react-native-reanimated
+```
+
 For iOS 
 
 ```sh
-
-npm install react-native-reanimated
 
 cd ios && pod install && cd ..
 
@@ -61,17 +63,25 @@ project.ext.react = [
 ```
 > For detailed instructions check it out [here](https://docs.swmansion.com/react-native-reanimated/docs/next/installation)
 
+> Rebuild the project
+
 ##### React Native SVG
 
 ```sh
 
 npm install react-native-svg
 
-cd ios && pod install && cd ..
+```
 
+For iOS
+
+```sh
+cd ios && pod install && cd ..
 ```
 
 > For detailed instructions check it out [here](https://github.com/react-native-community/react-native-svg)
+
+> Rebuild the project
 
 ## :mag: Usage
 
