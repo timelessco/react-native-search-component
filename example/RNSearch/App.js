@@ -8,8 +8,8 @@
 
 import React from 'react';
 import {
-  Button, StyleSheet,
-  Text, View, SafeAreaView, TouchableOpacity
+  SafeAreaView, StyleSheet,
+  Text, TouchableOpacity
 } from 'react-native';
 import SearchBar from './src/UISearchBar';
 
@@ -25,9 +25,7 @@ const App = () => {
       <TouchableOpacity style={{ paddingVertical: 12 }} onPress={toggleTheme}>
         <Text style={[styles.textStyle, { color: '#007AFF' }]}>Toggle Theme</Text>
       </TouchableOpacity>
-      <SearchBar
-        theme={theme}
-      />
+      <SearchBar theme={theme} />
     </SafeAreaView>
   );
 };
@@ -35,8 +33,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    paddingHorizontal: 16,
   },
   textStyle: {
     fontSize: 24,
