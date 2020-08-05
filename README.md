@@ -112,7 +112,7 @@ const App = () => {
       <TouchableOpacity style={{ paddingVertical: 12 }} onPress={toggleTheme}>
         <Text style={[styles.textStyle, { color: '#007AFF' }]}>Toggle Theme</Text>
       </TouchableOpacity>
-      <SearchComponent theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
+      <SearchComponent theme={theme} value={searchTerm} onChange={onChange} onSearchClear={onSearchClear} />
       <Text style={[themeBasedTextStyle, { textAlign: 'left', paddingLeft: 16 }]}> Search Term : {searchTerm}</Text>
     </SafeAreaView>
   );
