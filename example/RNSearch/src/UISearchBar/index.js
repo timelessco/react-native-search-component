@@ -40,7 +40,7 @@ const CloseIcon = ({ theme }) => {
   )
 }
 
-const SearchBar = (props) => {
+const SearchComponent = (props) => {
   const [searchInputFocussed, setSearchInputFocussed] = useState(false);
   const [searchText, setSearchText] = useState(props?.value);
   useEffect(() => {
@@ -167,17 +167,17 @@ const styles = StyleSheet.create({
 })
 
 
-SearchBar.propTypes = {
+SearchComponent.propTypes = {
   placeholder: PropTypes.string,
   placeholderTextColor: PropTypes.string,
   label: PropTypes.string,
-  onChange: PropTypes.func,
-  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   onSearchClear: PropTypes.func
 }
 
 
-SearchBar.defaultProps = {
+SearchComponent.defaultProps = {
   placeholder: 'Search',
   placeholderTextColor: null,
   label: 'Label',
@@ -186,4 +186,4 @@ SearchBar.defaultProps = {
   onSearchClear: () => { }
 }
 
-export default SearchBar;
+export default SearchComponent;
