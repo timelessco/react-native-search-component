@@ -63,8 +63,6 @@ project.ext.react = [
 ```
 > For detailed instructions check it out [here](https://docs.swmansion.com/react-native-reanimated/docs/next/installation)
 
-> Rebuild the project
-
 ##### React Native SVG
 
 ```sh
@@ -81,7 +79,7 @@ cd ios && pod install && cd ..
 
 > For detailed instructions check it out [here](https://github.com/react-native-community/react-native-svg)
 
-> Rebuild the project
+> Rebuild the project after adding the dependencies
 
 ## :mag: Usage
 
@@ -92,7 +90,7 @@ import {
   SafeAreaView, StyleSheet,
   Text, TouchableOpacity
 } from 'react-native';
-import SearchBar from './src/UISearchBar';
+import SearchComponent from 'react-native-search-component';
 
 
 const App = () => {
@@ -114,7 +112,7 @@ const App = () => {
       <TouchableOpacity style={{ paddingVertical: 12 }} onPress={toggleTheme}>
         <Text style={[styles.textStyle, { color: '#007AFF' }]}>Toggle Theme</Text>
       </TouchableOpacity>
-      <SearchBar theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
+      <SearchComponent theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
       <Text style={[themeBasedTextStyle, { textAlign: 'left', paddingLeft: 16 }]}> Search Term : {searchTerm}</Text>
     </SafeAreaView>
   );
