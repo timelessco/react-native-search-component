@@ -171,8 +171,8 @@ SearchComponent.propTypes = {
   placeholder: PropTypes.string,
   placeholderTextColor: PropTypes.string,
   label: PropTypes.string,
-  onChange: PropTypes.func,
-  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
   onSearchClear: PropTypes.func
 }
 
