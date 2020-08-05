@@ -42,26 +42,19 @@ const CloseIcon = ({ theme }) => {
 
 const SearchComponent = (props) => {
   const [searchInputFocussed, setSearchInputFocussed] = useState(false);
-  const [searchText, setSearchText] = useState(props?.value);
-  useEffect(() => {
-    setSearchText(props?.value);
-  }, [props?.value])
   const width = useWindowDimensions().width;
   const memoizedTextInputOnFocusWidth = useMemo(() => width - (50 + 32 + 32), [width]);
   const memoizedTextInputOnBlurWidth = useMemo(() => width - 32, [width]);
   const focusTextInput = useCallback(() => setSearchInputFocussed(true), []);
   const blurTextInput = useCallback(() => setSearchInputFocussed(false), []);
   const handleChange = useCallback((e) => {
-    setSearchText(e?.nativeEvent?.text);
     props?.onChange(e);
   }, [props?.onChange]);
   const handleClearSearch = useCallback(() => {
-    setSearchText('');
     props?.onSearchClear();
   })
   const handlePressCancel = useCallback(() => {
     searchTextInput?.blur();
-    setSearchText('');
     props?.onSearchClear();
   })
   useEffect(() => {
@@ -100,7 +93,7 @@ const SearchComponent = (props) => {
         <TextInput
           autoCorrect={false}
           autoCompleteType='off'
-          value={searchText}
+          value={props?.value}
           onChange={handleChange}
           ref={ref => searchTextInput = ref}
           onFocus={focusTextInput}
@@ -119,7 +112,7 @@ const SearchComponent = (props) => {
           placeholderTextColor={props?.placeholderTextColor || styledTheme[props?.theme].placeholderTextColor}
         />
         {
-          (searchInputFocussed && searchText?.length > 0) && (
+          (searchInputFocussed && props?.value?.length > 0) && (
             <TouchableOpacity style={styles.closeIconWrapper} onPress={handleClearSearch}>
               <CloseIcon />
             </TouchableOpacity>
