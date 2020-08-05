@@ -139,9 +139,13 @@ export default App;
 
 ## :wrench: Props
 
-|   Name                           | Description                                    | Required    | Type                 | Default              | 
-| ---------------------------------| ---------------------------------------------- | ----------- | -------------------- | -------------------- |
-|                                  |                                                |             |                      |                      |
+|   Name                           | Description                                      | Required    | Type                 | Default              | 
+| ---------------------------------| -------------------------------------------------| ----------- | -------------------- | -------------------- |
+| value                            | A search term Value                              | Yes         | String               | ''                   |
+| placeholder                      | A placeholder value                              | No          | String               | ''                   |
+| placeholderTextColor             | Tintcolor for Placeholder                        | No          | Color                | Based on theme       |
+| onChange                         | A Callback function returning TextInput onChange | Yes         | Function             | () => {}             |
+| onSearchClear                    | A Callback function on Close Icon click          | No          | Function             | () => {}             |
 
 
 ## :tada: Example
