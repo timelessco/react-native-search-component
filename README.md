@@ -84,14 +84,12 @@ cd ios && pod install && cd ..
 ## :mag: Usage
 
 ```js
-
 import React, { useState } from 'react';
 import {
   SafeAreaView, StyleSheet,
   Text, TouchableOpacity
 } from 'react-native';
 import SearchComponent from 'react-native-search-component';
-
 
 const App = () => {
   const [theme, setTheme] = React.useState('LIGHT');
@@ -108,12 +106,12 @@ const App = () => {
 
   return (
     <SafeAreaView style={themeBasedContainer}>
-      <Text style={themeBasedTextStyle}>Hello,World !</Text>
+      <Text style={themeBasedTextStyle}>React Native Search Component</Text>
       <TouchableOpacity style={{ paddingVertical: 12 }} onPress={toggleTheme}>
-        <Text style={[styles.textStyle, { color: '#007AFF' }]}>Toggle Theme</Text>
+        <Text style={[styles.textStyle, { color: '#007AFF', fontSize: 18 }]}>Toggle Theme</Text>
       </TouchableOpacity>
-      <SearchComponent theme={theme} value={searchTerm} onChange={onChange} onSearchClear={onSearchClear} />
-      <Text style={[themeBasedTextStyle, { textAlign: 'left', paddingLeft: 16 }]}> Search Term : {searchTerm}</Text>
+      <SearchComponent value={searchTerm} theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
+      <Text style={[themeBasedTextStyle, { textAlign: 'left', paddingLeft: 16, fontSize: 18 }]}> Search Term : {searchTerm}</Text>
     </SafeAreaView>
   );
 };
@@ -121,6 +119,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center'
   },
   textStyle: {
     fontSize: 24,
