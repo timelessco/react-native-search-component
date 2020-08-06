@@ -169,7 +169,7 @@ Checkout the example [here](https://github.com/timelessco/react-native-search-co
 
 ## :notebook: Blog
 
-Have a look at my blog [here]().
+COMING :soon:
 
 ## :snowman: Built with ❤️ and
 
