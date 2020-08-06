@@ -2,11 +2,11 @@
 
   <h1>React Native Search Component</h1>
   
-  <img style="margin-right:10;" width="auto" height="350" src="./example/RNSearch/assets/ioslight.gif">
+  <img width="auto" height="350" src="./example/RNSearch/assets/ioslight.gif">
 
-  <img style="margin-right:10;" width="auto" height="350" src="./example/RNSearch/assets/iosdark.gif">
+  <img width="auto" height="350" src="./example/RNSearch/assets/iosdark.gif">
 
-  <img style="margin-right:10;" width="auto" height="350" src="./example/RNSearch/assets/android.gif">
+  <img width="auto" height="350" src="./example/RNSearch/assets/android.gif">
   
 </div>
 
@@ -142,6 +142,17 @@ export default App;
 
 ## :camera: Screenshot
 
+### iOS
+
+<img  width="auto" height="350" src="./example/RNSearch/assets/screenshotlight.png">
+
+<img  width="auto" height="350" src="./example/RNSearch/assets/screenshotdark.png">
+
+### Android
+
+<img  width="auto" height="350" src="./example/RNSearch/assets/androidlight.jpg">
+
+<img  width="auto" height="350" src="./example/RNSearch/assets/androiddark.jpg">
 
 
 ## :wrench: Props
