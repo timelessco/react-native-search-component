@@ -146,8 +146,6 @@ export default App;
 
 ## :camera: Screenshot
 
-### iOS
-
 <div>
   
 <img src="./example/RNSearch/assets/screenshot.png">
