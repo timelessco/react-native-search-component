@@ -163,7 +163,8 @@ SearchComponent.propTypes = {
   placeholderTextColor: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  onSearchClear: PropTypes.func
+  onSearchClear: PropTypes.func,
+  theme: PropTypes.oneOf(['LIGHT', 'DARK'])
 }
 
 
@@ -172,7 +173,8 @@ SearchComponent.defaultProps = {
   placeholderTextColor: null,
   onChange: () => { },
   value: '',
-  onSearchClear: () => { }
+  onSearchClear: () => { },
+  theme: 'LIGHT'
 }
 
 export default SearchComponent;
