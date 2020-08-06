@@ -5,11 +5,11 @@
   
   <h1>React Native Search Component</h1>
   
-  <img width="auto" height="350" src="./example/RNSearch/assets/ioslight.gif">
+  <img width="auto" height="550" src="./example/RNSearch/assets/ioslight.gif">
 
-  <img width="auto" height="350" src="./example/RNSearch/assets/iosdark.gif">
+  <img width="auto" height="550" src="./example/RNSearch/assets/iosdark.gif">
 
-  <img width="auto" height="350" src="./example/RNSearch/assets/android.gif">
+  <img width="auto" height="550" src="./example/RNSearch/assets/android.gif">
   
 </div>
 
@@ -161,7 +161,7 @@ export default App;
 | placeholderTextColor             | Tintcolor for Placeholder                        | No          | Color                | Based on theme       |
 | onChange                         | A Callback function returning TextInput onChange | Yes         | Function             | () => {}             |
 | onSearchClear                    | A Callback function on Close Icon click          | No          | Function             | () => {}             |
-
+| theme                            | App Theme                                        | NO          | oneOf['LIGHT','DARK] | 'LIGHT'              |
 
 ## :tada: Example
 
