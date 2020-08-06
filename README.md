@@ -1,5 +1,13 @@
 <div align='center'>
-<h1>React Native Search Component</h1>
+
+  <h1>React Native Search Component</h1>
+  
+  <img style="margin-right:10;" width="auto" height="350" src="./example/RNSearch/assets/ioslight.gif">
+
+  <img style="margin-right:10;" width="auto" height="350" src="./example/RNSearch/assets/iosdark.gif">
+
+  <img style="margin-right:10;" width="auto" height="350" src="./example/RNSearch/assets/android.gif">
+  
 </div>
 
 
