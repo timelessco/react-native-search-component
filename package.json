@@ -8,11 +8,11 @@
   },
   "peerDependencies": {
     "react": "16.x",
-    "react-native": "0.62.x"
+    "react-native": "0.62.x",
+    "react-native-reanimated": "*"
   },
   "files": [
-    "src",
-    "index.js"
+    "src"
   ],
   "repository": {
     "type": "git",
