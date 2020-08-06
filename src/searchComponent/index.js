@@ -17,7 +17,7 @@ const styledTheme = {
     textColor: '#FFFFFF',
     placeholderTextColor: '#636366',
     textInputBackground: "rgba(44,44,46,0.8)",
-    searchFill: '#636366',
+    searchFill: '#b0b0b2',
   }
 }
 
@@ -103,9 +103,6 @@ const SearchComponent = (props) => {
             {
               backgroundColor: styledTheme[props?.theme].textInputBackground,
               color: styledTheme[props?.theme].textColor,
-            },
-            {
-              paddingLeft: 32,
             }
           ]}
           placeholder={props?.placeholder}
@@ -146,6 +143,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
     borderRadius: 12,
+    paddingLeft: 32
   },
   searchIconWrapper: {
     position: 'absolute',
@@ -163,7 +161,6 @@ const styles = StyleSheet.create({
 SearchComponent.propTypes = {
   placeholder: PropTypes.string,
   placeholderTextColor: PropTypes.string,
-  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   onSearchClear: PropTypes.func
@@ -173,7 +170,6 @@ SearchComponent.propTypes = {
 SearchComponent.defaultProps = {
   placeholder: 'Search',
   placeholderTextColor: null,
-  label: 'Label',
   onChange: () => { },
   value: '',
   onSearchClear: () => { }
