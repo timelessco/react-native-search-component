@@ -3,8 +3,7 @@ import {
   SafeAreaView, StyleSheet,
   Text, TouchableOpacity
 } from 'react-native';
-import SearchBar from './src/UISearchBar';
-
+import SearchComponent from 'react-native-search-component';
 
 const App = () => {
   const [theme, setTheme] = React.useState('LIGHT');
@@ -25,7 +24,7 @@ const App = () => {
       <TouchableOpacity style={{ paddingVertical: 12 }} onPress={toggleTheme}>
         <Text style={[styles.textStyle, { color: '#007AFF', fontSize: 18 }]}>Toggle Theme</Text>
       </TouchableOpacity>
-      <SearchBar value={searchTerm} theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
+      <SearchComponent value={searchTerm} theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
       <Text style={[themeBasedTextStyle, { textAlign: 'left', paddingLeft: 16, fontSize: 18 }]}> Search Term : {searchTerm}</Text>
     </SafeAreaView>
   );
