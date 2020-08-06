@@ -144,15 +144,23 @@ export default App;
 
 ### iOS
 
-<img  width="auto" height="350" src="./example/RNSearch/assets/screenshotlight.png">
+<div>
+  
+  <img  width="auto" height="350" src="./example/RNSearch/assets/screenshotlight.png">
 
-<img  width="auto" height="350" src="./example/RNSearch/assets/screenshotdark.png">
+  <img  width="auto" height="350" src="./example/RNSearch/assets/screenshotdark.png">
+  
+</div>
 
 ### Android
 
+<div>
+  
 <img  width="auto" height="350" src="./example/RNSearch/assets/androidlight.jpg">
 
 <img  width="auto" height="350" src="./example/RNSearch/assets/androiddark.jpg">
+  
+</div>
 
 
 ## :wrench: Props
