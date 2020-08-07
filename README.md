@@ -171,7 +171,7 @@ Checkout the example [here](https://github.com/timelessco/react-native-search-co
 
 ## :notebook: Blog
 
-COMING :soon:
+Checkout my blog [here](https://medium.com/timeless/react-native-search-component-de0be89df6e1).
 
 ## :snowman: Built with ❤️ and
 
