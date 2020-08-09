@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Platform, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions } from 'react-native';
+import { ActivityIndicator, Platform, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import Animated, { Easing, spring, timing, Value } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
 
@@ -56,7 +56,7 @@ const SearchComponent = (props) => {
   const handlePressCancel = useCallback(() => {
     searchTextInput?.blur();
     props?.onSearchClear();
-  })
+  });
   useEffect(() => {
     if (searchInputFocussed) {
       spring(textInputWidth, {
@@ -109,7 +109,11 @@ const SearchComponent = (props) => {
           placeholderTextColor={props?.placeholderTextColor || styledTheme[props?.theme].placeholderTextColor}
         />
         {
-          (searchInputFocussed && props?.value?.length > 0) && (
+          props?.isLoading ? (
+            <View style={styles.loadingIconWrapper} >
+              <ActivityIndicator size='small' color={props?.loadingTintColor} />
+            </View>
+          ) : (searchInputFocussed && props?.value?.length > 0) && (
             <TouchableOpacity style={styles.closeIconWrapper} onPress={handleClearSearch}>
               <CloseIcon />
             </TouchableOpacity>
@@ -154,7 +158,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 8,
     top: Platform.OS === 'android' ? 21 : 18
-  }
+  },
+  loadingIconWrapper: {
+    position: 'absolute',
+    right: 10,
+    top: Platform.OS === 'android' ? 18 : 15
+  },
 })
 
 
@@ -164,7 +173,9 @@ SearchComponent.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   onSearchClear: PropTypes.func,
-  theme: PropTypes.oneOf(['LIGHT', 'DARK'])
+  theme: PropTypes.oneOf(['LIGHT', 'DARK']),
+  isLoading: PropTypes.bool,
+  loadingTintColor: PropTypes.string,
 }
 
 
@@ -174,7 +185,9 @@ SearchComponent.defaultProps = {
   onChange: () => { },
   value: '',
   onSearchClear: () => { },
-  theme: 'LIGHT'
+  theme: 'LIGHT',
+  isLoading: false,
+  loadingTintColor: '#636366',
 }
 
 export default SearchComponent;
