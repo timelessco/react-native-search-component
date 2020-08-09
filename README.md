@@ -164,6 +164,9 @@ export default App;
 | onChange                         | A Callback function returning TextInput onChange | Yes         | Function             | () => {}             |
 | onSearchClear                    | A Callback function on Close Icon click          | No          | Function             | () => {}             |
 | theme                            | App Theme                                        | NO          | oneOf['LIGHT','DARK] | 'LIGHT'              |
+| isLoading                        | Loading state Indicator on search                | NO          | Boolean              | false                |
+| loadingTintColor                 | The tint color of spinner                        | NO          | Color                | '#636366'            |
+
 
 ## :tada: Example
 
