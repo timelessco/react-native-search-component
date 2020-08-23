@@ -183,7 +183,7 @@ export default App;
 | theme                | App Theme                                        | NO       | oneOf['LIGHT','DARK] | 'LIGHT'        |
 | isLoading            | Loading state Indicator on search                | NO       | Boolean              | false          |
 | loadingTintColor     | The tint color of spinner                        | NO       | Color                | '#636366'      |
-| cancelColor          | The tint 'Cancel' text                           | NO       | Color                | '#007AFF'      |
+| cancelColor          | The tint color of 'Cancel' text                  | NO       | Color                | '#007AFF'      |
 
 ## :tada: Example
 
