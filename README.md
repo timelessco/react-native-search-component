@@ -4,7 +4,6 @@
   [![npm](https://badgen.net/npm/dt/react-native-search-component)](https://www.npmjs.com/package/react-native-search-component)
   [![npm](https://badgen.net/npm/v/react-native-search-component)](https://www.npmjs.com/package/react-native-search-component)
 
-
   <h1>React Native Search Component</h1>
   
   <img width="auto" height="550" src="./example/RNSearch/assets/ioslight.gif">
@@ -14,7 +13,6 @@
   <img width="auto" height="550" src="./example/RNSearch/assets/android.gif">
   
 </div>
-
 
 ## :anchor: Installation
 
@@ -34,7 +32,7 @@ npm i react-native-search-component
 npm install react-native-reanimated
 ```
 
-For iOS 
+For iOS
 
 ```sh
 
@@ -53,6 +51,7 @@ project.ext.react = [
 ]
 
 ```
+
 2. Plug Reanimated in MainApplication.java
 
 ```code
@@ -74,6 +73,7 @@ project.ext.react = [
     };
   ...
 ```
+
 > For detailed instructions check it out [here](https://docs.swmansion.com/react-native-reanimated/docs/next/installation)
 
 ##### React Native SVG
@@ -97,34 +97,53 @@ cd ios && pod install && cd ..
 ## :mag: Usage
 
 ```js
-import React, { useState } from 'react';
-import {
-  SafeAreaView, StyleSheet,
-  Text, TouchableOpacity
-} from 'react-native';
-import SearchComponent from 'react-native-search-component';
+import React, { useState } from "react";
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity } from "react-native";
+import SearchComponent from "react-native-search-component";
 
 const App = () => {
-  const [theme, setTheme] = React.useState('LIGHT');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [theme, setTheme] = React.useState("LIGHT");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const toggleTheme = () => theme === 'LIGHT' ? setTheme('DARK') : setTheme('LIGHT');
-  const themeBasedContainer = [styles.container, { backgroundColor: theme === 'LIGHT' ? 'white' : 'black' }];
-  const themeBasedTextStyle = [styles.textStyle, { color: theme === 'LIGHT' ? 'black' : 'white' }];
+  const toggleTheme = () =>
+    theme === "LIGHT" ? setTheme("DARK") : setTheme("LIGHT");
+  const themeBasedContainer = [
+    styles.container,
+    { backgroundColor: theme === "LIGHT" ? "white" : "black" },
+  ];
+  const themeBasedTextStyle = [
+    styles.textStyle,
+    { color: theme === "LIGHT" ? "black" : "white" },
+  ];
 
   const onChange = (e) => {
-    setSearchTerm(e?.nativeEvent?.text)
-  }
-  const onSearchClear = () => setSearchTerm('');
+    setSearchTerm(e?.nativeEvent?.text);
+  };
+  const onSearchClear = () => setSearchTerm("");
 
   return (
     <SafeAreaView style={themeBasedContainer}>
       <Text style={themeBasedTextStyle}>React Native Search Component</Text>
       <TouchableOpacity style={{ paddingVertical: 12 }} onPress={toggleTheme}>
-        <Text style={[styles.textStyle, { color: '#007AFF', fontSize: 18 }]}>Toggle Theme</Text>
+        <Text style={[styles.textStyle, { color: "#007AFF", fontSize: 18 }]}>
+          Toggle Theme
+        </Text>
       </TouchableOpacity>
-      <SearchComponent value={searchTerm} theme={theme} onChange={onChange} onSearchClear={onSearchClear} />
-      <Text style={[themeBasedTextStyle, { textAlign: 'left', paddingLeft: 16, fontSize: 18 }]}> Search Term : {searchTerm}</Text>
+      <SearchComponent
+        value={searchTerm}
+        theme={theme}
+        onChange={onChange}
+        onSearchClear={onSearchClear}
+      />
+      <Text
+        style={[
+          themeBasedTextStyle,
+          { textAlign: "left", paddingLeft: 16, fontSize: 18 },
+        ]}
+      >
+        {" "}
+        Search Term : {searchTerm}
+      </Text>
     </SafeAreaView>
   );
 };
@@ -132,17 +151,16 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: "center",
   },
   textStyle: {
     fontSize: 24,
-    textAlign: 'center',
-    paddingVertical: 10
-  }
-})
+    textAlign: "center",
+    paddingVertical: 10,
+  },
+});
 
 export default App;
-
 ```
 
 ## :camera: Screenshot
@@ -153,20 +171,19 @@ export default App;
   
 </div>
 
-
 ## :wrench: Props
 
-|   Name                           | Description                                      | Required    | Type                 | Default              | 
-| ---------------------------------| -------------------------------------------------| ----------- | -------------------- | -------------------- |
-| value                            | A search term Value                              | Yes         | String               | ''                   |
-| placeholder                      | A placeholder value                              | No          | String               | ''                   |
-| placeholderTextColor             | Tintcolor for Placeholder                        | No          | Color                | Based on theme       |
-| onChange                         | A Callback function returning TextInput onChange | Yes         | Function             | () => {}             |
-| onSearchClear                    | A Callback function on Close Icon click          | No          | Function             | () => {}             |
-| theme                            | App Theme                                        | NO          | oneOf['LIGHT','DARK] | 'LIGHT'              |
-| isLoading                        | Loading state Indicator on search                | NO          | Boolean              | false                |
-| loadingTintColor                 | The tint color of spinner                        | NO          | Color                | '#636366'            |
-
+| Name                 | Description                                      | Required | Type                 | Default        |
+| -------------------- | ------------------------------------------------ | -------- | -------------------- | -------------- |
+| value                | A search term Value                              | Yes      | String               | ''             |
+| placeholder          | A placeholder value                              | No       | String               | ''             |
+| placeholderTextColor | Tintcolor for Placeholder                        | No       | Color                | Based on theme |
+| onChange             | A Callback function returning TextInput onChange | Yes      | Function             | () => {}       |
+| onSearchClear        | A Callback function on Close Icon click          | No       | Function             | () => {}       |
+| theme                | App Theme                                        | NO       | oneOf['LIGHT','DARK] | 'LIGHT'        |
+| isLoading            | Loading state Indicator on search                | NO       | Boolean              | false          |
+| loadingTintColor     | The tint color of spinner                        | NO       | Color                | '#636366'      |
+| cancelColor          | The tint 'Cancel' text                           | NO       | Color                | '#007AFF'      |
 
 ## :tada: Example
 
@@ -182,15 +199,13 @@ Checkout my blog [here](https://medium.com/timeless/react-native-search-componen
 - [react-native-reanimated](https://docs.swmansion.com/react-native-reanimated/)
 - [react-native-svg](https://github.com/react-native-community/react-native-svg)
 
-
 ## :v: Contributing
-Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
 
+Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
 
 ## :man: Author
 
-[Karthik B](https://twitter.com/_iam_karthik) 
-
+[Karthik B](https://twitter.com/_iam_karthik)
 
 ## :clipboard: License
 
