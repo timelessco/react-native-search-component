@@ -121,7 +121,7 @@ const SearchComponent = (props) => {
         }
       </Animated.View>
       <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={handlePressCancel}>
-        <Animated.Text style={{ paddingLeft: 16, fontSize: 17, color: '#007AFF', opacity: cancelTextOpacity }}>
+        <Animated.Text style={{ paddingLeft: 16, fontSize: 17, color: props.cancelColor, opacity: cancelTextOpacity }}>
           Cancel
         </Animated.Text>
       </TouchableOpacity>
@@ -176,6 +176,7 @@ SearchComponent.propTypes = {
   theme: PropTypes.oneOf(['LIGHT', 'DARK']),
   isLoading: PropTypes.bool,
   loadingTintColor: PropTypes.string,
+  cancelColor: PropTypes.string
 }
 
 
@@ -188,6 +189,7 @@ SearchComponent.defaultProps = {
   theme: 'LIGHT',
   isLoading: false,
   loadingTintColor: '#636366',
+  cancelColor: '#007AFF'
 }
 
 export default SearchComponent;
