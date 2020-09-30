@@ -185,6 +185,39 @@ export default App;
 | loadingTintColor     | The tint color of spinner                        | NO       | Color                | '#636366'      |
 | cancelColor          | The tint color of 'Cancel' text                  | NO       | Color                | '#007AFF'      |
 
+
+## :wrench: Methods
+
+```
+.triggerFocus()
+```
+Triggers focus event. Useful if SearchComponent hidden on page and you want to focus on input when you show it.
+
+Example:
+```js
+import { useEffect, useRef } from 'react';
+
+[...]
+
+const searchInput = useRef();
+
+[...]
+
+useEffect(() => {
+  if (isSearchComponentVisible) {
+    searchInput.current.triggerFocus();
+  }
+}, [isSearchComponentVisible]);
+
+<SearchComponent
+  value={searchTerm}
+  theme={theme}
+  onChange={onChange}
+  onSearchClear={onSearchClear}
+  ref={searchInput}
+/>
+```
+
 ## :tada: Example
 
 Checkout the example [here](https://github.com/timelessco/react-native-search-component/tree/master/example/RNSearch).
