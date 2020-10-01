@@ -210,3 +210,7 @@ Pull requests are always welcome! Feel free to open a new GitHub issue for any c
 ## :clipboard: License
 
 MIT
+
+<div align="center">
+<sub><sup>Project by <a href="https://github.com/timelessco"> @Timeless</a></sup></sub><small> ✌</small>
+</div>
