@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/timelessco/react-native-search-component/compare/v1.2.0...v1.3.0) (2020-10-05)
+
+
+### Features
+
+* ✨ Added .triggerFocus() method ([1493181](https://github.com/timelessco/react-native-search-component/commit/1493181c07d37ece680b6fc49255d52652f09d34))
+* 🎉  Update issue templates ([d87ac4b](https://github.com/timelessco/react-native-search-component/commit/d87ac4b24c0f05524bed7b94751215142a29aa7a))
+
 ## [1.2.0](https://github.com/timelessco/react-native-search-component/compare/v1.0.3...v1.2.0) (2020-08-23)
 
 
