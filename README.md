@@ -189,9 +189,9 @@ export default App;
 ## :wrench: Methods
 
 ```
-.triggerFocus()
+.searchInputRef()
 ```
-Triggers focus event. Useful if SearchComponent hidden on page and you want to focus on input when you show it.
+Returns searchTextInput ref. Useful for directly control search input.
 
 Example:
 ```js
@@ -203,11 +203,14 @@ const searchInput = useRef();
 
 [...]
 
-useEffect(() => {
-  if (isSearchComponentVisible) {
-    searchInput.current.triggerFocus();
+const toggleFocus = () => {
+  const isFocused = searchInput.current.searchInputRef().isFocused();
+  if (isFocused) {
+    searchInput.current.searchInputRef().blur();
+  } else {
+    searchInput.current.searchInputRef().focus();
   }
-}, [isSearchComponentVisible]);
+};
 
 <SearchComponent
   value={searchTerm}
