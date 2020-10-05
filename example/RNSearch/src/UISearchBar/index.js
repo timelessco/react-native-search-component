@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState, forwardRef, useImperativeHandle } from 'react';
 import { ActivityIndicator, Platform, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import Animated, { Easing, spring, timing, Value } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
@@ -40,9 +40,9 @@ const CloseIcon = ({ theme }) => {
   )
 }
 
-const SearchComponent = (props) => {
+const SearchComponent = forwardRef((props, ref) => {
   const [searchInputFocussed, setSearchInputFocussed] = useState(false);
-  const width = useWindowDimensions().width;
+  const { width } = useWindowDimensions();
   const memoizedTextInputOnFocusWidth = useMemo(() => width - (50 + 32 + 32), [width]);
   const memoizedTextInputOnBlurWidth = useMemo(() => width - 32, [width]);
   const focusTextInput = useCallback(() => setSearchInputFocussed(true), []);
@@ -57,6 +57,11 @@ const SearchComponent = (props) => {
     searchTextInput?.blur();
     props?.onSearchClear();
   });
+  useImperativeHandle(ref, () => ({
+    searchInputRef() {
+      return searchTextInput;
+    }
+  }));
   useEffect(() => {
     if (searchInputFocussed) {
       spring(textInputWidth, {
@@ -85,7 +90,7 @@ const SearchComponent = (props) => {
     }
   }, [searchInputFocussed]);
   return (
-    <Animated.View style={[styles.searchInputWrapper]}>
+    <Animated.View style={styles.searchInputWrapper}>
       <Animated.View style={styles.searchIconWrapper}>
         <SearchIcon theme={props?.theme} />
       </Animated.View>
@@ -121,13 +126,13 @@ const SearchComponent = (props) => {
         }
       </Animated.View>
       <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={handlePressCancel}>
-        <Animated.Text style={{ paddingLeft: 16, fontSize: 17, color: '#007AFF', opacity: cancelTextOpacity }}>
+        <Animated.Text style={{ paddingLeft: 16, fontSize: 17, color: props.cancelColor, opacity: cancelTextOpacity }}>
           Cancel
         </Animated.Text>
       </TouchableOpacity>
     </Animated.View>
   )
-}
+});
 
 
 const styles = StyleSheet.create({
@@ -176,6 +181,7 @@ SearchComponent.propTypes = {
   theme: PropTypes.oneOf(['LIGHT', 'DARK']),
   isLoading: PropTypes.bool,
   loadingTintColor: PropTypes.string,
+  cancelColor: PropTypes.string
 }
 
 
@@ -188,6 +194,7 @@ SearchComponent.defaultProps = {
   theme: 'LIGHT',
   isLoading: false,
   loadingTintColor: '#636366',
+  cancelColor: '#007AFF'
 }
 
 export default SearchComponent;

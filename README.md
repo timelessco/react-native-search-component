@@ -185,6 +185,42 @@ export default App;
 | loadingTintColor     | The tint color of spinner                        | NO       | Color                | '#636366'      |
 | cancelColor          | The tint color of 'Cancel' text                  | NO       | Color                | '#007AFF'      |
 
+
+## :wrench: Methods
+
+```
+.searchInputRef()
+```
+Returns searchTextInput ref. Useful for directly control search input.
+
+Example:
+```js
+import { useEffect, useRef } from 'react';
+
+[...]
+
+const searchInput = useRef();
+
+[...]
+
+const toggleFocus = () => {
+  const isFocused = searchInput.current.searchInputRef().isFocused();
+  if (isFocused) {
+    searchInput.current.searchInputRef().blur();
+  } else {
+    searchInput.current.searchInputRef().focus();
+  }
+};
+
+<SearchComponent
+  value={searchTerm}
+  theme={theme}
+  onChange={onChange}
+  onSearchClear={onSearchClear}
+  ref={searchInput}
+/>
+```
+
 ## :tada: Example
 
 Checkout the example [here](https://github.com/timelessco/react-native-search-component/tree/master/example/RNSearch).
