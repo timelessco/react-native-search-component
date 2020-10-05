@@ -58,9 +58,9 @@ const SearchComponent = forwardRef((props, ref) => {
     props?.onSearchClear();
   });
   useImperativeHandle(ref, () => ({
-    triggerFocus() {
-      searchTextInput?.focus();
-    },
+    searchInputRef() {
+      return searchTextInput;
+    }
   }));
   useEffect(() => {
     if (searchInputFocussed) {
