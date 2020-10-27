@@ -108,7 +108,8 @@ const SearchComponent = forwardRef((props, ref) => {
             {
               backgroundColor: styledTheme[props?.theme].textInputBackground,
               color: styledTheme[props?.theme].textColor,
-            }
+            },
+            props.customSearchInputStyle,
           ]}
           placeholder={props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor || styledTheme[props?.theme].placeholderTextColor}
@@ -132,7 +133,7 @@ const SearchComponent = forwardRef((props, ref) => {
       </TouchableOpacity>
     </Animated.View>
   )
-});
+})
 
 
 const styles = StyleSheet.create({
@@ -194,7 +195,8 @@ SearchComponent.defaultProps = {
   theme: 'LIGHT',
   isLoading: false,
   loadingTintColor: '#636366',
-  cancelColor: '#007AFF'
+  cancelColor: '#007AFF',
+  customSearchInputStyle: {},
 }
 
 export default SearchComponent;
