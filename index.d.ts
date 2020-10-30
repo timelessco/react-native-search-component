@@ -5,11 +5,11 @@ declare module 'react-native-search-component' {
   export interface SearchComponentProps {
     placeholder?: string;
     placeholderTextColor?: string;
-    onChange: func.isRequired;
-    value: string.isRequired;
-    onSearchClear?: () => {};
+    onChange: () => void;
+    value: string;
+    onSearchClear?: () => void;
     theme?: 'LIGHT' | 'DARK';
-    isLoading?: bool;
+    isLoading?: boolean;
     loadingTintColor?: string;
     cancelColor?: string;
     customSearchInputStyle?: ViewStyle;
