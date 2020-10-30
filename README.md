@@ -173,17 +173,19 @@ export default App;
 
 ## :wrench: Props
 
-| Name                 | Description                                      | Required | Type                 | Default        |
-| -------------------- | ------------------------------------------------ | -------- | -------------------- | -------------- |
-| value                | A search term Value                              | Yes      | String               | ''             |
-| placeholder          | A placeholder value                              | No       | String               | ''             |
-| placeholderTextColor | Tintcolor for Placeholder                        | No       | Color                | Based on theme |
-| onChange             | A Callback function returning TextInput onChange | Yes      | Function             | () => {}       |
-| onSearchClear        | A Callback function on Close Icon click          | No       | Function             | () => {}       |
-| theme                | App Theme                                        | NO       | oneOf['LIGHT','DARK] | 'LIGHT'        |
-| isLoading            | Loading state Indicator on search                | NO       | Boolean              | false          |
-| loadingTintColor     | The tint color of spinner                        | NO       | Color                | '#636366'      |
-| cancelColor          | The tint color of 'Cancel' text                  | NO       | Color                | '#007AFF'      |
+| Name                   | Description                                                | Required | Type                 | Default        |
+| --------------------   | ------------------------------------------------           | -------- | -------------------- | -------------- |
+| value                  | A search term Value                                        | Yes      | String               | ''             |
+| placeholder            | A placeholder value                                        | No       | String               | ''             |
+| placeholderTextColor   | Tintcolor for Placeholder                                  | No       | Color                | Based on theme |
+| onChange               | A Callback function returning TextInput onChange           | Yes      | Function             | () => {}       |
+| onSearchClear          | A Callback function on Close Icon click                    | No       | Function             | () => {}       |
+| theme                  | App Theme                                                  | NO       | oneOf['LIGHT','DARK] | 'LIGHT'        |
+| isLoading              | Loading state Indicator on search                          | NO       | Boolean              | false          |
+| loadingTintColor       | The tint color of spinner                                  | NO       | Color                | '#636366'      |
+| cancelColor            | The tint color of 'Cancel' text                            | NO       | Color                | '#007AFF'      |
+| customSearchInputStyle | The styles, that will rewrite default searchInputStyle     | NO       | Object               | {<br>&emsp;fontSize: 18,<br>&emsp;fontWeight: '400',<br>&emsp;lineHeight: 22,<br>&emsp;letterSpacing: 0.5,<br>&emsp;paddingHorizontal: 12,<br>&emsp;paddingVertical: 10,<br>&emsp;borderRadius: 12,<br>&emsp;paddingLeft: 32<br>}|
+| customCancelTextStyle  | The styles, that will rewrite default "cancel" text Style  | NO       | Object               | {<br>&emsp;paddingLeft: 16,<br>&emsp;fontSize: 17,<br>&emsp;color: props.cancelColor<br>}|
 
 
 ## :wrench: Methods

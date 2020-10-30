@@ -108,7 +108,8 @@ const SearchComponent = forwardRef((props, ref) => {
             {
               backgroundColor: styledTheme[props?.theme].textInputBackground,
               color: styledTheme[props?.theme].textColor,
-            }
+            },
+            props.customSearchInputStyle,
           ]}
           placeholder={props?.placeholder}
           placeholderTextColor={props?.placeholderTextColor || styledTheme[props?.theme].placeholderTextColor}
@@ -126,7 +127,7 @@ const SearchComponent = forwardRef((props, ref) => {
         }
       </Animated.View>
       <TouchableOpacity style={{ display: 'flex', justifyContent: 'center' }} onPress={handlePressCancel}>
-        <Animated.Text style={{ paddingLeft: 16, fontSize: 17, color: props.cancelColor, opacity: cancelTextOpacity }}>
+        <Animated.Text style={[{ paddingLeft: 16, fontSize: 17, color: props.cancelColor, opacity: cancelTextOpacity }, props.customCancelTextStyle]}>
           Cancel
         </Animated.Text>
       </TouchableOpacity>
@@ -194,7 +195,9 @@ SearchComponent.defaultProps = {
   theme: 'LIGHT',
   isLoading: false,
   loadingTintColor: '#636366',
-  cancelColor: '#007AFF'
+  cancelColor: '#007AFF',
+  customSearchInputStyle: {},
+  customCancelTextStyle: {},
 }
 
 export default SearchComponent;
