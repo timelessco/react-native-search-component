@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useCallback, useEffect, useMemo, useState, forwardRef, useImperativeHandle } from 'react';
-import { ActivityIndicator, Platform, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, View } from 'react-native';
+import { ActivityIndicator, Platform, StyleSheet, TextInput, TextPropTypes, TouchableOpacity, useWindowDimensions, View, ViewPropTypes } from 'react-native';
 import Animated, { Easing, spring, timing, Value } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
 
@@ -182,7 +182,9 @@ SearchComponent.propTypes = {
   theme: PropTypes.oneOf(['LIGHT', 'DARK']),
   isLoading: PropTypes.bool,
   loadingTintColor: PropTypes.string,
-  cancelColor: PropTypes.string
+  cancelColor: PropTypes.string,
+  customSearchInputStyle: ViewPropTypes['style'],
+  customCancelTextStyle: TextPropTypes['style'],
 }
 
 
