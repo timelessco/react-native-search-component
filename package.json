@@ -39,7 +39,9 @@
   },
   "homepage": "https://github.com/timelessco/react-native-search-component#readme",
   "devDependencies": {
+    "@types/react-native": "^0.63.30",
     "metro-react-native-babel-preset": "^0.60.0",
-    "standard-version": "^8.0.2"
+    "standard-version": "^8.0.2",
+    "typescript": "next"
   }
 }
