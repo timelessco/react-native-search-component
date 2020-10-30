@@ -15,7 +15,8 @@
     "react-native-svg": "*"
   },
   "files": [
-    "src"
+    "src",
+    "index.d.ts"
   ],
   "repository": {
     "type": "git",
