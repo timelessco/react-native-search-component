@@ -183,8 +183,10 @@ export default App;
 | theme                  | App Theme                                                  | NO       | oneOf['LIGHT','DARK] | 'LIGHT'        |
 | isLoading              | Loading state Indicator on search                          | NO       | Boolean              | false          |
 | loadingTintColor       | The tint color of spinner                                  | NO       | Color                | '#636366'      |
-| searchIcon             | The search icon of input                                   | NO       | Function             | [Check here]   |
+| searchIcon             | The search icon of input                                   | NO       | Function             | [Check here]
+(https://github.com/timelessco/react-native-search-component#wrench-custom-icons)        |
 | closeIcon              | The close icon of input                                    | NO       | Function             | [Check here]   |
+(https://github.com/timelessco/react-native-search-component#wrench-custom-icons)        |
 | cancelColor            | The tint color of 'Cancel' text                            | NO       | Color                | '#007AFF'      |
 | customSearchInputStyle | The styles, that will rewrite default searchInputStyle     | NO       | Object               | [Check here](https://github.com/timelessco/react-native-search-component#wrench-style-objects)       |
 | customCancelTextStyle  | The styles, that will rewrite default "cancel" text Style  | NO       | Object               |   [Check here](https://github.com/timelessco/react-native-search-component#wrench-style-objects)               |
