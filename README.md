@@ -184,9 +184,31 @@ export default App;
 | isLoading              | Loading state Indicator on search                          | NO       | Boolean              | false          |
 | loadingTintColor       | The tint color of spinner                                  | NO       | Color                | '#636366'      |
 | cancelColor            | The tint color of 'Cancel' text                            | NO       | Color                | '#007AFF'      |
-| customSearchInputStyle | The styles, that will rewrite default searchInputStyle     | NO       | Object               | {<br>&emsp;fontSize: 18,<br>&emsp;fontWeight: '400',<br>&emsp;lineHeight: 22,<br>&emsp;letterSpacing: 0.5,<br>&emsp;paddingHorizontal: 12,<br>&emsp;paddingVertical: 10,<br>&emsp;borderRadius: 12,<br>&emsp;paddingLeft: 32<br>}|
-| customCancelTextStyle  | The styles, that will rewrite default "cancel" text Style  | NO       | Object               | {<br>&emsp;paddingLeft: 16,<br>&emsp;fontSize: 17,<br>&emsp;color: props.cancelColor<br>}|
+| customSearchInputStyle | The styles, that will rewrite default searchInputStyle     | NO       | Object               | (Check)[https://github.com/timelessco/react-native-search-component#wrench-style-objects]       |
+| customCancelTextStyle  | The styles, that will rewrite default "cancel" text Style  | NO       | Object               |  (Check)[https://github.com/timelessco/react-native-search-component#wrench-style-objects]               |
 
+## :wrench: Style Objects
+
+```
+default value of Custome Search Input
+{
+  fontSize: 18,
+  fontWeight: '400',
+  lineHeight: 22,
+  letterSpacing: 0.5,
+  paddingHorizontal: 12,
+  paddingVertical: 10,
+  borderRadius: 12,
+  paddingLeft: 32
+}
+
+default value of Custom Cancel Text Style
+{
+  paddingLeft: 16,
+  fontSize: 17,
+  color: props.cancelColor
+}
+```
 
 ## :wrench: Methods
 
