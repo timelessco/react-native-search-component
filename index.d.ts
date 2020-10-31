@@ -16,7 +16,7 @@ declare module 'react-native-search-component' {
     customCancelTextStyle?: TextStyle;
   } 
 
-  const SearchComponent: React.ForwardRefExoticComponent<SearchComponentProps>;
+  const SearchComponent: React.ForwardRefRenderFunction<T, SearchComponentProps>;
   
   export default SearchComponent;
 }
