@@ -92,7 +92,7 @@ const SearchComponent = forwardRef((props, ref) => {
   return (
     <Animated.View style={styles.searchInputWrapper}>
       <Animated.View style={styles.searchIconWrapper}>
-        <SearchIcon theme={props?.theme} />
+        {props?.searchIcon ? props.searchIcon : <SearchIcon theme={props?.theme} />}
       </Animated.View>
       <Animated.View style={{ width: textInputWidth, paddingVertical: 4 }}>
         <TextInput
@@ -121,7 +121,7 @@ const SearchComponent = forwardRef((props, ref) => {
             </View>
           ) : (searchInputFocussed && props?.value?.length > 0) && (
             <TouchableOpacity style={styles.closeIconWrapper} onPress={handleClearSearch}>
-              <CloseIcon />
+             {props?.closeIcon ? props.closeIcon :  <CloseIcon />}
             </TouchableOpacity>
           )
         }
