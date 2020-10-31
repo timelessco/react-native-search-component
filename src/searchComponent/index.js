@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useMemo, useState, forwardRef, useImperativeHandle } from 'react';
-import { ActivityIndicator, Platform, StyleSheet, TextInput, TextPropTypes, TouchableOpacity, useWindowDimensions, View, ViewPropTypes } from 'react-native';
+import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
+import { ActivityIndicator, Platform, StyleSheet, Text, TextInput, TouchableOpacity, useWindowDimensions, View, ViewPropTypes } from 'react-native';
 import Animated, { Easing, spring, timing, Value } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
 
@@ -183,8 +183,8 @@ SearchComponent.propTypes = {
   isLoading: PropTypes.bool,
   loadingTintColor: PropTypes.string,
   cancelColor: PropTypes.string,
-  customSearchInputStyle: ViewPropTypes['style'],
-  customCancelTextStyle: TextPropTypes['style'],
+  customSearchInputStyle: ViewPropTypes.style,
+  customCancelTextStyle: Text.propTypes.style,
 }
 
 

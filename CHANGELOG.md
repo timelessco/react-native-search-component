@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/timelessco/react-native-search-component/compare/v1.3.1...v1.4.0) (2020-10-31)
+
+
+### Features
+
+* :tada: Added types ([89594e5](https://github.com/timelessco/react-native-search-component/commit/89594e5d45e183ddc78671c2074c80a332d9fe33))
+* Added typescript ([f25f44d](https://github.com/timelessco/react-native-search-component/commit/f25f44d0c20b45bb6fb0d61a4e31ed239a584333))
+
+
+### Bug Fixes
+
+* :zap: Added missing props ([d97654b](https://github.com/timelessco/react-native-search-component/commit/d97654bd92ec35a38053547cf48eb025da7b6b51))
+* :zap: Added prop types for missing props ([06aa32b](https://github.com/timelessco/react-native-search-component/commit/06aa32b8d349822285aaef14c17cbea20e7e1e66))
+* :zap: Added proptypes for customSearchInputStyle and customCancelTextStyle ([287e0b3](https://github.com/timelessco/react-native-search-component/commit/287e0b325bb0054c766a182600424b1e9cbfa4e5))
+* Changed type of render function ([e3aef0d](https://github.com/timelessco/react-native-search-component/commit/e3aef0dc1d7802d97c84fe41279dcd6911aebbb5))
+
 ### [1.3.1](https://github.com/timelessco/react-native-search-component/compare/v1.3.0...v1.3.1) (2020-10-30)
 
 ## [1.3.0](https://github.com/timelessco/react-native-search-component/compare/v1.2.0...v1.3.0) (2020-10-05)

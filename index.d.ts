@@ -5,18 +5,18 @@ declare module 'react-native-search-component' {
   export interface SearchComponentProps {
     placeholder?: string;
     placeholderTextColor?: string;
-    onChange: func.isRequired;
-    value: string.isRequired;
-    onSearchClear?: () => {};
+    onChange: () => void;
+    value: string;
+    onSearchClear?: () => void;
     theme?: 'LIGHT' | 'DARK';
-    isLoading?: bool;
+    isLoading?: boolean;
     loadingTintColor?: string;
     cancelColor?: string;
     customSearchInputStyle?: ViewStyle;
     customCancelTextStyle?: TextStyle;
   } 
 
-  const SearchComponent: React.ForwardRefExoticComponent<SearchComponentProps>;
+  const SearchComponent: React.ForwardRefRenderFunction<T, SearchComponentProps>;
   
   export default SearchComponent;
 }
