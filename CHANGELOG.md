@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0] (2021-06-13))
+
+### Changed
+
+* Updated `react` `peerDependencies` in `package.json`.
+* Updated `react-native` `peerDependencies` in `package.json.`
+* Updated `@types/react-native` `devDependencies` in `package.json.`
+* Updated `metro-react-native-babel-preset` `devDependencies` in `package.json.`
+
 ## [1.4.0](https://github.com/timelessco/react-native-search-component/compare/v1.3.1...v1.4.0) (2020-10-31)
 
 
