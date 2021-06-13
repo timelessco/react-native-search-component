@@ -1,18 +1,12 @@
 {
   "name": "react-native-search-component",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A simple customizable iOS-like Search Component in React Native",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "standard-version"
-  },
-  "peerDependencies": {
-    "react": "16.x",
-    "react-native": "0.62.x",
-    "react-native-reanimated": "*",
-    "react-native-svg": "*"
   },
   "files": [
     "src",
@@ -38,9 +32,15 @@
     "url": "https://github.com/timelessco/react-native-search-component/issues"
   },
   "homepage": "https://github.com/timelessco/react-native-search-component#readme",
+  "peerDependencies": {
+    "react": ">=16.x",
+    "react-native": ">=0.62.x",
+    "react-native-reanimated": "*",
+    "react-native-svg": "*"
+  },
   "devDependencies": {
-    "@types/react-native": "^0.63.30",
-    "metro-react-native-babel-preset": "^0.60.0",
+    "@types/react-native": "^0.64.10",
+    "metro-react-native-babel-preset": "^0.66.0",
     "standard-version": "^8.0.2",
     "typescript": "next"
   }
