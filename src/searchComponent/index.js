@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
 import { ActivityIndicator, Platform, StyleSheet, Text, TextInput, TouchableOpacity, useWindowDimensions, View, ViewPropTypes } from 'react-native';
-import Animated, { Easing, spring, timing, Value } from 'react-native-reanimated';
+import Animated, { EasingNode, spring, timing, Value } from 'react-native-reanimated';
 import Svg, { Path } from 'react-native-svg';
 
 const styledTheme = {
@@ -75,7 +75,7 @@ const SearchComponent = forwardRef((props, ref) => {
       timing(cancelTextOpacity, {
         toValue: 1,
         duration: 200,
-        easing: Easing.linear
+        easing: EasingNode.linear
       }).start();
     } else {
       spring(textInputWidth, {
@@ -87,7 +87,7 @@ const SearchComponent = forwardRef((props, ref) => {
       timing(cancelTextOpacity, {
         toValue: 0,
         duration: 200,
-        easing: Easing.linear
+        easing: EasingNode.linear
       }).start();
     }
   }, [searchInputFocussed]);
