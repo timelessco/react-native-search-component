@@ -8,7 +8,7 @@ declare module 'react-native-search-component' {
     onChange: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
     value: string;
     onSearchClear?: () => void;
-    theme?: 'LIGHT' | 'DARK' | 'ligth' | 'dark';
+    theme?: 'LIGHT' | 'DARK' | 'light' | 'dark';
     isLoading?: boolean;
     loadingTintColor?: string;
     cancelColor?: string;
