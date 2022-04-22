@@ -41,6 +41,8 @@ const CloseIcon = ({ theme }) => {
 }
 
 const SearchComponent = forwardRef((props, ref) => {
+  const safeTheme = props?.theme.toUpperCase();
+
   const [searchInputFocussed, setSearchInputFocussed] = useState(false);
   const { width } = useWindowDimensions();
   const memoizedTextInputOnFocusWidth = useMemo(() => width - (50 + 32 + 32), [width]);
@@ -89,10 +91,11 @@ const SearchComponent = forwardRef((props, ref) => {
       }).start();
     }
   }, [searchInputFocussed]);
+
   return (
     <Animated.View style={styles.searchInputWrapper}>
       <Animated.View style={styles.searchIconWrapper}>
-        <SearchIcon theme={props?.theme} />
+        <SearchIcon theme={safeTheme} />
       </Animated.View>
       <Animated.View style={{ width: textInputWidth, paddingVertical: 4 }}>
         <TextInput
@@ -106,13 +109,13 @@ const SearchComponent = forwardRef((props, ref) => {
           style={[
             styles.searchInputStyle,
             {
-              backgroundColor: styledTheme[props?.theme].textInputBackground,
-              color: styledTheme[props?.theme].textColor,
+              backgroundColor: styledTheme[safeTheme].textInputBackground,
+              color: styledTheme[safeTheme].textColor,
             },
             props.customSearchInputStyle,
           ]}
           placeholder={props?.placeholder}
-          placeholderTextColor={props?.placeholderTextColor || styledTheme[props?.theme].placeholderTextColor}
+          placeholderTextColor={props?.placeholderTextColor || styledTheme[safeTheme].placeholderTextColor}
         />
         {
           props?.isLoading ? (
@@ -179,7 +182,7 @@ SearchComponent.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   onSearchClear: PropTypes.func,
-  theme: PropTypes.oneOf(['LIGHT', 'DARK']),
+  theme: PropTypes.oneOf(['LIGHT', 'DARK', 'light', 'dark']),
   isLoading: PropTypes.bool,
   loadingTintColor: PropTypes.string,
   cancelColor: PropTypes.string,
