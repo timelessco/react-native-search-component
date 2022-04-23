@@ -1,18 +1,18 @@
 declare module 'react-native-search-component' {
-  import {  ViewStyle, TextStyle } from "react-native"
+  import { TextStyle, NativeSyntheticEvent, TextInputChangeEventData } from "react-native"
   import React from 'react'
 
   export interface SearchComponentProps {
     placeholder?: string;
     placeholderTextColor?: string;
-    onChange: () => void;
+    onChange: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
     value: string;
     onSearchClear?: () => void;
-    theme?: 'LIGHT' | 'DARK';
+    theme?: 'LIGHT' | 'DARK' | 'light' | 'dark';
     isLoading?: boolean;
     loadingTintColor?: string;
     cancelColor?: string;
-    customSearchInputStyle?: ViewStyle;
+    customSearchInputStyle?: TextStyle;
     customCancelTextStyle?: TextStyle;
   } 
 
